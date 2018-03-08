@@ -34,3 +34,5 @@ Bryce - Architect of the data; building the database and tables, finding paralle
 datasets, work on GUI if we decide want one, scraping for data if needed.
 Matt - Working on preprocessing the data, looking for trends and patterns in it using pandas,
 scraping for data if needed
+
+2018
