@@ -3,6 +3,21 @@ March Madness 2018 Predictive Model
 
 Big Data Class for Michigan State University.
 
+CSE 482 Project Proposal: NCAA March Madness Predictive Model
+Bryce Corey - Owen McMahon - Matthew Pasco
+2/8/2018 - Spring Semester
+
+Data Sources
+- http://www.cs.odu.edu/~yaohang/publications/MarchMadness.pdf
+- https://arxiv.org/abs/1412.0248
+- https://www.sports-reference.com/cbb/
+- http://hoop-math.com
+- https://kenpom.com
+- https://www.kaggle.com/c/march-machine-learning-mania-2016/data
+- https://www.kaggle.com/c/march-machine-learning-mania-2017/data
+
+Abstract
+
 The purpose of this project will be to build a predictive model for the upcoming 2018
 NCAA Tournament. The predictive model will be used to classify two games and predict
 the winner. This model can then be used on the tournament bracket.
