@@ -3,9 +3,10 @@ import json
 import numpy
 
 from sklearn import linear_model
+from sklearn import kernel_ridge
 
 
-def createTrainTest(testRange, trainRange,ds):
+def createTrainTest(trainRange, testRange,ds):
 
     topTeamsTest = []
     bottomTeamsTest = []
@@ -13,7 +14,8 @@ def createTrainTest(testRange, trainRange,ds):
     topTeamsTrain = []
     bottomTeamsTrain = []
 
-    nTeams = 21
+    nTeams = 16
+    tTeams = 64
     for year in testRange:
         
         file = './data/%s%d.json' % (ds,year)
@@ -27,7 +29,7 @@ def createTrainTest(testRange, trainRange,ds):
 
         topTeamsTest += data[:nTeams]
 
-        bottomTeamsTest += data[64-nTeams:64]
+        bottomTeamsTest += data[tTeams-nTeams:tTeams]
 
     for year in trainRange:
         
@@ -42,7 +44,7 @@ def createTrainTest(testRange, trainRange,ds):
 
         topTeamsTrain += data[:nTeams]
 
-        bottomTeamsTrain += data[64-nTeams:64]
+        bottomTeamsTrain += data[tTeams-nTeams:tTeams]
 
         return(topTeamsTrain,bottomTeamsTrain,topTeamsTest,bottomTeamsTest)
 
@@ -68,6 +70,7 @@ def main():
     xnTrain=[(team['AdjEM'],team['AdjD']['value'],team['AdjO']['value'],team['AdjT']['value'],team['AdjEM-NCSOS']['value'],team['AdjEM-StrengthofSchedule']['value'],team['OppD']['value'],team['OppO']['value'],team['Luck']['value']) for team in botTrain]
 
     xpTest=[(team['AdjEM'],team['AdjD']['value'],team['AdjO']['value'],team['AdjT']['value'],team['AdjEM-NCSOS']['value'],team['AdjEM-StrengthofSchedule']['value'],team['OppD']['value'],team['OppO']['value'],team['Luck']['value']) for team in topTest]
+    #xnTest=[(team['AdjEM'],team['AdjD']['value'],team['AdjO']['value'],team['AdjT']['value'],team['AdjEM-NCSOS']['value'],team['AdjEM-StrengthofSchedule']['value'],team['OppD']['value'],team['OppO']['value'],team['Luck']['value']) for team in botTest]
 
 
     xTrain = xnTrain+xpTrain
@@ -75,13 +78,17 @@ def main():
 
     #xTest = xnTest+xpTest
     #yTest = [-1 for i in xnTest]+[1 for i in xpTest]
-    xTest = [xpTest[0], xpTest[3]]
+    xTest = xpTest
 
     
 
     regr = linear_model.LinearRegression()
+    #regr = kernel_ridge.KernelRidge()
+    
+
     regr.fit(xTrain,yTrain)
     yPred = regr.predict(xTest)
+    
 
     '''
     same=0
@@ -93,10 +100,12 @@ def main():
             same+=1
      print("accuracy",same/len(yPred))
     '''
-    
 
-    print(topTrain[0]['Team'], yPred[0])
-    print(topTrain[1]['Team'], yPred[1])
+    
+    
+    for i in range(len(xTest)):
+        print(topTest[i]['Team'], yPred[i])
+    
         
 
    
