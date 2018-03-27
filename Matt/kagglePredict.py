@@ -3,7 +3,7 @@ import numpy
 from sklearn.linear_model import LinearRegression
 
 
-class Season:
+class SeasonStats:
 
     teamStats = []
 
@@ -13,10 +13,9 @@ class Season:
         self.teamStats = [[0]] *numTeams
         self.played = [0] *numTeams
 
-    def addStat(self,teamNumber,statsArray):
-        combined = ((numpy.array(self.teamStats[teamNumber]) * self.played[teamNumber]) + statsArray)
-        self.played += 1
-        self.teamStats[teamNumber] = combined / self.played
+    def addGameStat(self,winningTeamStats, losingTeamStats):
+        
+
 
 # this pulls all data from the regular season
 # returns an array of games played
@@ -48,6 +47,24 @@ def getRegularSeason():
 
 
 
+
+
+
+
+#gets the 28 features we want
+def getTeamStats(game):
+    # we want the stats starting after location and forth
+    fieldFeatures = [ header for header in data[0]][7:]
+
+    winningScore = game["Wteam"]
+    losingScore = game["Lteam"]
+    winningFeatures = [ game[field] for field in fieldFeatures[1:halfFeatures]]
+    losingFeatures = [ game[field] for field in fieldFeatures[halfFeatures:]]
+
+    winningTeamStats = [winningScore] + winningFeatures
+    losingTeamStats = [losingScore] + losingFeatures
+
+    return (winningTeamStats,losingTeamStats)
 
 
 
@@ -122,15 +139,12 @@ def createXY(data):
     return (X,Y)
 
 
-def createXYTest(data):
 
-
-    return 0
 
 
 
     
-def main():
+def predict():
 
     # get the data from csv
     data = getRegularSeason()
@@ -168,7 +182,6 @@ def main():
     print("accuracy",accuracy)
 
 
-main()
 
 
 
