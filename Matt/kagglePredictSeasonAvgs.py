@@ -62,6 +62,9 @@ def getTeamStats(game):
 
     winningScore = game["Wscore"]
     losingScore = game["Lscore"]
+
+    # each team has 13 fields, losing team first, winning team second
+    halfFeatures = int((len(fieldFeatures) -1)/2) +1
     winningFeatures = [ game[field] for field in fieldFeatures[1:halfFeatures]]
     losingFeatures = [ game[field] for field in fieldFeatures[halfFeatures:]]
 
