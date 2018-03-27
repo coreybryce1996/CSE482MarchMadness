@@ -16,7 +16,7 @@ class SeasonStats:
         self.played = numpy.zeros(numTeams)
 
     def addGameStat(self,winningTeamId, losingTeamId, winningTeamStats, losingTeamStats):
-        
+        print("todo")
 
 
 # this pulls all data from the regular season
@@ -58,13 +58,14 @@ def getRegularSeason():
 
 def getTeamStats(game):
     # we want the stats starting after location and forth
-    fieldFeatures = [ header for header in data[0]][7:]
+    
+    fieldFeatures = [ header for header in game][8:]
 
     winningScore = game["Wscore"]
     losingScore = game["Lscore"]
 
     # each team has 13 fields, losing team first, winning team second
-    halfFeatures = int((len(fieldFeatures) -1)/2) +1
+    halfFeatures = int(len(fieldFeatures)/2)
     winningFeatures = [ game[field] for field in fieldFeatures[1:halfFeatures]]
     losingFeatures = [ game[field] for field in fieldFeatures[halfFeatures:]]
 
@@ -81,6 +82,7 @@ def main():
 
     # get the data from csv
     data = getRegularSeason()
+    getTeamStats(data[0])
 
 
 main()
