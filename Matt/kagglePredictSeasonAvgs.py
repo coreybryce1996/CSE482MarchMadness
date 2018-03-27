@@ -10,8 +10,10 @@ class SeasonStats:
     played = []
 
     def __init__(self,numTeams):
-        self.teamStats = [[0]] *numTeams
-        self.played = [0] *numTeams
+        #init a 2d array where each row has 28 team features
+        self.teamStats = numpy.zeros(numTeams,28)
+        # init vector of zeros with length num teams
+        self.played = numpy.zeros(numTeams)
 
     def addGameStat(self,winningTeamId, losingTeamId, winningTeamStats, losingTeamStats):
         
