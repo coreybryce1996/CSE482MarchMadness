@@ -9,14 +9,35 @@ class SeasonStats:
 
     played = []
 
-    def __init__(self,numTeams):
+    def __init__(self):
         #init a 2d array where each row has 28 team features
-        self.teamStats = numpy.zeros(numTeams,28)
+
+        # make it a dictionary
+        self.teamStats = {} #numpy.zeros(numTeams,28)
         # init vector of zeros with length num teams
-        self.played = numpy.zeros(numTeams)
+        self.played = {}#numpy.zeros(numTeams)
 
     def addGameStat(self,winningTeamId, losingTeamId, winningTeamStats, losingTeamStats):
-        print("todo")
+        numpy.array(winningTeamStats)
+        numpy.array(losingTeamStats)
+
+        tempWinningLosingStats = numpy.concatenate((winningTeamStats, losingTeamStats))
+        tempLosingWinningStats = numpy.concatenate((losingTeamStats, winningTeamStats))
+
+
+        if winningTeamId in self.teamStats and winningTeamId in self.played:
+            self.teamStats[winningTeamId] = (self.teamStats[winningTeamId] * self.played[winningTeamId] + tempWinningLosingStats) / (self.played[winningTeamId] + 1)
+            self.played[winningTeamId] += 1
+        else:
+            self.teamStats[winningTeamId] = tempWinningLosingStats
+            self.played[winningTeamId] = 1
+
+        if losingTeamId in self.teamStats and losingTeamId in self.played:
+            self.teamStats[losingTeamId] = (self.teamStats[losingTeamId] * self.played[losingTeamId] + tempLosingWinningStats) / (self.played[losingTeamId] + 1)
+            self.played[losingTeamId] += 1
+        else:
+            self.teamStats[losingTeamId] = tempLosingWinningStats
+            self.played[losingTeamId] = 1
 
 
 # this pulls all data from the regular season
@@ -66,7 +87,7 @@ def getTeamStats(game):
 
     # each team has 13 fields, losing team first, winning team second
     halfFeatures = int(len(fieldFeatures)/2)
-    winningFeatures = [ game[field] for field in fieldFeatures[1:halfFeatures]]
+    winningFeatures = [ game[field] for field in fieldFeatures[0:halfFeatures]]
     losingFeatures = [ game[field] for field in fieldFeatures[halfFeatures:]]
 
     winningTeamStats = [winningScore] + winningFeatures
@@ -82,9 +103,19 @@ def main():
 
     # get the data from csv
     data = getRegularSeason()
-    getTeamStats(data[0])
+    teamStats = getTeamStats(data[0])
 
+    allSeasonsStats = {}
+    for game in data:    
+        season = game['Season']
 
+        if season not in allSeasonsStats:
+            allSeasonsStats[season] = SeasonStats()
+            
+        teamStats = getTeamStats(game)
+        allSeasonsStats[season].addGameStat(teamStats[0], teamStats[1], teamStats[2], teamStats[3])
+
+    #print(allSeasonsStats[2003].teamStats)
 main()
 
 
