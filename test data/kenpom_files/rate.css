@@ -1,0 +1,190 @@
+#half-column {
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+#half-column2 {
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+#half-column-left {
+	margin:20px 0;
+	text-align:left;
+}
+
+#data-area {
+	color:#000;
+	font-size:12pt;
+	width:100%;
+	padding-top: 10px;
+}
+
+#ratings-table td.bold-bottom
+{
+	border-bottom: 2px solid #000;
+}
+
+#ratings-table tr.bold-bottom-tourney td
+{
+	border-bottom: 2px solid #000;
+	background-color: #fcc;
+}
+
+#ratings-table tr.tourney td
+{
+	background-color: #fcc;
+}
+
+#ratings-table
+{
+	font-family: "Signika", "arial";
+	font-size: 13px;
+	border-collapse:collapse;
+	margin-left:auto;
+	margin-right:auto;
+	border-bottom: 2px solid #000;
+}
+
+#ratings-table tr th {
+	text-align: center;
+	line-height: 1.15em;
+}
+
+#ratings-table th {
+	color: #039;
+	padding: 1px 3px;
+	background:#c3d9ff;
+	vertical-align:bottom;
+}
+
+#ratings-table td.td-left
+{
+	color: #000;
+	line-height:1.2;
+	padding: 1px 2px 1px 4px;
+}
+
+#ratings-table td.td-right
+{
+	color: #000;
+	line-height:1.2;
+	padding: 1px 4px 1px 2px;
+}
+
+#ratings-table td.divide
+{
+	border-left: 1px solid #BBB;
+}
+
+#ratings-table tr td
+{
+	border-bottom: 1px solid #000;
+	text-align: center;
+	color: #000;
+	line-height:1.2;
+	padding: 1px 5px;
+}
+
+#ratings-table td.divide-today
+{
+	border-left: 1px dotted #000;
+	background-color: #DEE;
+}
+
+#ratings-table td.thisConf
+{
+	background-color: #ECD;
+}
+
+#ratings-table td.thisConf-divide
+{
+	background-color: #ECD;
+	border-left: 1px dotted #000;
+}
+
+#ratings-table td.extra-padding
+{
+	padding:5px 3px 1px 3px;
+}
+
+#ratings-table tr.label td
+{
+	border-top: 2px solid #000;
+	background-color:#eef;
+	text-align:left;
+}
+
+#ratings-table tr.bold-bottom td
+{
+	border-bottom: 2px solid #000;
+}
+
+#ratings-table td.bold-bottom-divide
+{
+	border-bottom: 2px solid #000;
+	border-left: 1px solid #BBB;
+}
+
+#ratings-table td.bold-bottom-left
+{
+	border-bottom: 2px solid #000;
+	text-align:left;
+}
+
+#ratings-table td.wrong {
+	text-align:left;
+	color:#FF0000;
+}
+
+#ratings-table td.exact {
+	text-align:left;
+	background-color:#FFCC00;
+	border:2px solid #FF6600;
+}
+
+#ratings-table td.correct {
+	text-align:left;
+	color:#347c17;
+}
+
+#confStandings {
+	color:#000;
+	font-size:12pt;
+	clear:both;
+	border: 0;
+	margin-left: 0;
+	margin-top: 5px;
+	text-align:center;
+}
+
+h4 {
+	font-weight:600;
+	font-size:1.3em;	
+	margin-bottom:0px;
+}
+
+#subscribe {
+	float:right;
+	padding-right:20px;
+}
+
+#question {
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:12px;
+}
+
+#question h4 {
+	background-color:#F2EAED;
+	font-size:0.9em;
+	margin-bottom:6px;
+	padding:0;
+	font-weight:normal;
+}

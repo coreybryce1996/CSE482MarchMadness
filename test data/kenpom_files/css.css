@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Signika Regular'), local('Signika-Regular'), url(https://fonts.gstatic.com/l/font?kit=vEFR2_JTCgwQ5ejvK1M0VFBMSW80-_i0c5vonPrmTouBPG3FcEKHjFtgzppvyVQ0Qa9L63qTDiFgoJhwF--3lmarL5fMG6xjm6FAsNJcg0RstLXR4TYwbRk4Cy5aeSQps598zcmYXQ&skey=2df7b3f7f6d8a32a&v=v8) format('woff2');
+}
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Signika SemiBold'), local('Signika-SemiBold'), url(https://fonts.gstatic.com/l/font?kit=vEFU2_JTCgwQ5ejvE44CI3VbOGg59PW3dpztgOb6TY6GOW7If0-A9CMcy51qylk7TKxO7H-QEz59o513Euy6mWuSFK7JHKlglq5Ns9dbhkdxq6jS5DE1bhQ3Birhqppc2coIp7HkSenlfQ&skey=40ca7a96257c86e1&v=v8) format('woff2');
+}
