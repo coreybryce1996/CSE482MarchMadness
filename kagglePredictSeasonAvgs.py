@@ -112,8 +112,8 @@ def main():
         if season not in allSeasonsStats:
             allSeasonsStats[season] = SeasonStats()
             
-        teamStats = getTeamStats(game)
-        allSeasonsStats[season].addGameStat(teamStats[0], teamStats[1], teamStats[2], teamStats[3])
+        (wId,lId,wStats,lStats) = getTeamStats(game)
+        allSeasonsStats[season].addGameStat(wId,lId,wStats,lStats)
 
     #print(allSeasonsStats[2003].teamStats)
 main()
