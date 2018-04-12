@@ -109,7 +109,7 @@ def createXY(data):
         Xn = [ location ] + [ game[field] for field in fieldFeatures]
 
         X.append(Xn)
-        Y.append(+1)
+        Y.append(game["Wscore"]-game["Lscore"])
 
 
     
@@ -134,7 +134,7 @@ def createXY(data):
         Xn = [ location, game[fieldFeatures[0]] ] + losingFeatures  + winningFeatures
 
         X.append(Xn)
-        Y.append(-1)
+        Y.append(game["Lscore"]-game["Wscore"])
 
     return (X,Y)
 
@@ -181,6 +181,7 @@ def predict():
 
     print("accuracy",accuracy)
 
+predict()
 
 
 
