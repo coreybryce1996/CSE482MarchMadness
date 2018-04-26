@@ -4,6 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import Perceptron
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
+from sklearn.neural_network import MLPRegressor
 import json
 import re
 
@@ -98,14 +99,14 @@ def createTourneyXY(gameData, kenpomData):
         if i %2 ==0:
             team1id = game["WTeamID"]
             team2id = game["LTeamID"]
-            yN = game["WScore"] -game["LScore"]
+            yN = [game["WScore"],game["LScore"]]
             #yN =1;
         else:
             team2id = game["WTeamID"]
             team1id = game["LTeamID"]
             location *= -1
             #yN= -1;
-            yN = game["LScore"]-game["WScore"]
+            yN = [game["LScore"],game["WScore"]]
 
         try:
             team1Stats = list(kenpomData[str(season) +':'+str(team1id)].values())
@@ -166,7 +167,9 @@ def createBracket(tournData,kenpomData,model):
 
     games[0] = tournData.copy()
 
-    
+    kenpomNames = getKenpomNames()
+
+
     # iterate over every round
     for rnd in range(6):
         games.append([])
@@ -175,48 +178,65 @@ def createBracket(tournData,kenpomData,model):
         # predict Y vector for current round
         predicted = model.predict(test)
         numGamesInRound=len(games[rnd])
+
+        print('Round',rnd+1)
+
         # iterate over the games
         for i in range(0,numGamesInRound,2):
             # create the next round matchup
-            match = [0,0,0]
 
-            #select winner of game
-            if numpy.sign(predicted[i])==1:
-                match[0] = games[rnd][i][0]
+            index =i
+            match = [0,0,0,0]
+
+            t1Score,t2Score = predicted[index]
+
+            if t1Score > t2Score:
+                match[0] = games[rnd][index][0]
+                
             else:
-                match[0] = games[rnd][i][1]
-            games[rnd][i][2]= predicted[i]
+                match[0] = games[rnd][index][1]
+            
 
-            if(numGamesInRound!=1):
-                #select winner of other game
-                if numpy.sign(predicted[i+1])==1:
-                    match[1] = games[rnd][i+1][0]
+            #print( kenpomNames[str(games[rnd][index][0])]["TeamNameSpelling"],'  ',kenpomNames[str(games[rnd][index][1])]["TeamNameSpelling"],'  ',t1Score,'  ',t2Score)
+            games[rnd][index][2] = t1Score
+            games[rnd][index][3] = t2Score
+
+
+            if numGamesInRound > 1:
+                index = i+1
+                t1Score,t2Score = predicted[index]
+                if t1Score > t2Score:
+                    match[1] = games[rnd][index][0]
                 else:
-                    match[1] = games[rnd][i+1][1]
-                games[rnd][i+1][2]= predicted[i+1]
-                #add this matchup to the next round data
+                    match[1] = games[rnd][index][1]
+                games[rnd][index][2] = t1Score
+                games[rnd][index][3] = t2Score
+                #print( kenpomNames[str(games[rnd][index][0])]["TeamNameSpelling"],'  ',kenpomNames[str(games[rnd][index][1])]["TeamNameSpelling"],'  ',t1Score,'  ',t2Score)
+            
             games[rnd+1].append(match)
+        print()
+
+
+
+            
+            
             
         
         
-    kenpomNames = getKenpomNames()
-
+    
+    
     for rnd in range(6):
         print("Round",rnd+1)
         for game in games[rnd]:
-
-            #print(str(game[0])+','+str(game[1]))
-            
+           
             team1Name = kenpomNames[str(game[0])]["TeamNameSpelling"]
             team2Name = kenpomNames[str(game[1])]["TeamNameSpelling"]
-
-            if(numpy.sign(game[2])==1):
-                print(team1Name, "beats",team2Name, "by", numpy.abs(game[2]))
-            else:
-                print(team2Name, "beats",team1Name, "by", numpy.abs(game[2]))
+            
+            print(team1Name, game[2], team2Name, game[3])
+            
             
         print("")
-
+    
 
 
 
@@ -226,7 +246,7 @@ def formatFirstRound(gameData):
     fRound = []
 
     for game in gameData[:32]:
-        match = [game["WTeamID"],game["LTeamID"],0]
+        match = [game["WTeamID"],game["LTeamID"],0,0]
         fRound.append(match)
 
     return fRound
@@ -251,13 +271,16 @@ def main():
     (xTrain,yTrain) = createTourneyXY(trainTournData,oldKenpomData)
 
     # create our model
-    model = LinearRegression()
+    #model = LinearRegression()
+    model = MLPRegressor(hidden_layer_sizes=15)
    
     # fit our model using training data
     model.fit(xTrain,yTrain)
     # run the model on our data
 
     createBracket(formattedTourn,curKenpomData,model)
+
+    print()
     
 
     
