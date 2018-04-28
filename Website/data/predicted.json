@@ -1,0 +1,443 @@
+[
+ {
+   "Round": 0,
+   "team1Name": "umbc",
+   "team1Score": 42.5171787499,
+   "team2Name": "virginia",
+   "team2Score": 71.5549168465
+ },
+ {
+   "Round": 0,
+   "team1Name": "kansas-state",
+   "team1Score": 80.3539933571,
+   "team2Name": "creighton",
+   "team2Score": 76.3199617563
+ },
+ {
+   "Round": 0,
+   "team1Name": "kentucky",
+   "team1Score": 79.3516812872,
+   "team2Name": "davidson",
+   "team2Score": 69.9531020552
+ },
+ {
+   "Round": 0,
+   "team1Name": "buffalo",
+   "team1Score": 74.9513302472,
+   "team2Name": "arizona",
+   "team2Score": 83.8559655823
+ },
+ {
+   "Round": 0,
+   "team1Name": "loyola-il",
+   "team1Score": 69.5148279825,
+   "team2Name": "miami-florida",
+   "team2Score": 69.3516656878
+ },
+ {
+   "Round": 0,
+   "team1Name": "tennessee",
+   "team1Score": 76.9274071755,
+   "team2Name": "wright-state",
+   "team2Score": 57.1892199966
+ },
+ {
+   "Round": 0,
+   "team1Name": "nevada",
+   "team1Score": 72.0068993561,
+   "team2Name": "texas",
+   "team2Score": 73.3996969579
+ },
+ {
+   "Round": 0,
+   "team1Name": "cincinnati",
+   "team1Score": 80.8384973788,
+   "team2Name": "umbc",
+   "team2Score": 52.8990863104
+ },
+ {
+   "Round": 0,
+   "team1Name": "xavier",
+   "team1Score": 102.458329859,
+   "team2Name": "tx southern",
+   "team2Score": 68.4383067089
+ },
+ {
+   "Round": 0,
+   "team1Name": "florida-state",
+   "team1Score": 83.5969934027,
+   "team2Name": "missouri",
+   "team2Score": 77.7229238618
+ },
+ {
+   "Round": 0,
+   "team1Name": "ohio-state",
+   "team1Score": 86.2427905022,
+   "team2Name": "south-dakota-state",
+   "team2Score": 69.8169450285
+ },
+ {
+   "Round": 0,
+   "team1Name": "gonzaga",
+   "team1Score": 70.704396659,
+   "team2Name": "uncg",
+   "team2Score": 59.6616384949
+ },
+ {
+   "Round": 0,
+   "team1Name": "houston",
+   "team1Score": 76.2021039456,
+   "team2Name": "sd state",
+   "team2Score": 69.1989645143
+ },
+ {
+   "Round": 0,
+   "team1Name": "michigan",
+   "team1Score": 79.1134941926,
+   "team2Name": "montana",
+   "team2Score": 60.0409945892
+ },
+ {
+   "Round": 0,
+   "team1Name": "texas-am",
+   "team1Score": 75.6479377569,
+   "team2Name": "providence",
+   "team2Score": 70.7678851104
+ },
+ {
+   "Round": 0,
+   "team1Name": "unc",
+   "team1Score": 99.7889079445,
+   "team2Name": "lipscomb",
+   "team2Score": 72.9422653391
+ },
+ {
+   "Round": 0,
+   "team1Name": "villanova",
+   "team1Score": 87.7779646147,
+   "team2Name": "radford",
+   "team2Score": 57.4596265468
+ },
+ {
+   "Round": 0,
+   "team1Name": "alabama",
+   "team1Score": 75.5093284481,
+   "team2Name": "virginia-tech",
+   "team2Score": 76.5170745006
+ },
+ {
+   "Round": 0,
+   "team1Name": "west-virginia",
+   "team1Score": 87.9071152171,
+   "team2Name": "murray-state",
+   "team2Score": 70.0889215623
+ },
+ {
+   "Round": 0,
+   "team1Name": "marshall",
+   "team1Score": 81.5073279578,
+   "team2Name": "wichita-state",
+   "team2Score": 88.9488807931
+ },
+ {
+   "Round": 0,
+   "team1Name": "florida",
+   "team1Score": 81.0261899692,
+   "team2Name": "st-bonaventure",
+   "team2Score": 70.5686635697
+ },
+ {
+   "Round": 0,
+   "team1Name": "texas-tech",
+   "team1Score": 84.8383057552,
+   "team2Name": "stephen-f-austin",
+   "team2Score": 62.0145474149
+ },
+ {
+   "Round": 0,
+   "team1Name": "butler",
+   "team1Score": 85.8564979039,
+   "team2Name": "arkansas",
+   "team2Score": 78.9807053433
+ },
+ {
+   "Round": 0,
+   "team1Name": "purdue",
+   "team1Score": 91.8678793461,
+   "team2Name": "cs fullerton",
+   "team2Score": 65.892927917
+ },
+ {
+   "Round": 0,
+   "team1Name": "kansas",
+   "team1Score": 87.0921505292,
+   "team2Name": "pennsylvania",
+   "team2Score": 65.5190075469
+ },
+ {
+   "Round": 0,
+   "team1Name": "seton-hall",
+   "team1Score": 87.234398286,
+   "team2Name": "north-carolina-state",
+   "team2Score": 83.4237848189
+ },
+ {
+   "Round": 0,
+   "team1Name": "clemson",
+   "team1Score": 75.5171523959,
+   "team2Name": "new-mexico-state",
+   "team2Score": 61.9054641474
+ },
+ {
+   "Round": 0,
+   "team1Name": "auburn",
+   "team1Score": 88.140371921,
+   "team2Name": "col-of-charleston",
+   "team2Score": 69.9445984135
+ },
+ {
+   "Round": 0,
+   "team1Name": "syracuse",
+   "team1Score": 70.8951697519,
+   "team2Name": "texas-christian",
+   "team2Score": 71.9783019802
+ },
+ {
+   "Round": 0,
+   "team1Name": "michigan-state",
+   "team1Score": 89.6521972607,
+   "team2Name": "bucknell",
+   "team2Score": 64.5072277241
+ },
+ {
+   "Round": 0,
+   "team1Name": "rhode-island",
+   "team1Score": 79.6581946972,
+   "team2Name": "oklahoma",
+   "team2Score": 82.9174018899
+ },
+ {
+   "Round": 0,
+   "team1Name": "duke",
+   "team1Score": 95.685800738,
+   "team2Name": "iona",
+   "team2Score": 70.0517976719
+ },
+ {
+   "Round": 1,
+   "team1Name": "virginia",
+   "team1Score": 68.6576262889,
+   "team2Name": "kansas-state",
+   "team2Score": 53.2284211591
+ },
+ {
+   "Round": 1,
+   "team1Name": "kentucky",
+   "team1Score": 80.8528432956,
+   "team2Name": "arizona",
+   "team2Score": 75.0292176541
+ },
+ {
+   "Round": 1,
+   "team1Name": "loyola-il",
+   "team1Score": 64.6700285034,
+   "team2Name": "tennessee",
+   "team2Score": 67.7372363484
+ },
+ {
+   "Round": 1,
+   "team1Name": "texas",
+   "team1Score": 59.7143324125,
+   "team2Name": "cincinnati",
+   "team2Score": 63.8284420838
+ },
+ {
+   "Round": 1,
+   "team1Name": "xavier",
+   "team1Score": 89.2080535203,
+   "team2Name": "florida-state",
+   "team2Score": 82.7459159927
+ },
+ {
+   "Round": 1,
+   "team1Name": "ohio-state",
+   "team1Score": 74.9234166822,
+   "team2Name": "gonzaga",
+   "team2Score": 70.6583223709
+ },
+ {
+   "Round": 1,
+   "team1Name": "houston",
+   "team1Score": 68.8296756495,
+   "team2Name": "michigan",
+   "team2Score": 70.2446771138
+ },
+ {
+   "Round": 1,
+   "team1Name": "texas-am",
+   "team1Score": 78.0662592271,
+   "team2Name": "unc",
+   "team2Score": 80.8094898831
+ },
+ {
+   "Round": 1,
+   "team1Name": "villanova",
+   "team1Score": 86.6221598573,
+   "team2Name": "virginia-tech",
+   "team2Score": 75.3448286899
+ },
+ {
+   "Round": 1,
+   "team1Name": "west-virginia",
+   "team1Score": 90.3100894659,
+   "team2Name": "wichita-state",
+   "team2Score": 79.2639588775
+ },
+ {
+   "Round": 1,
+   "team1Name": "florida",
+   "team1Score": 69.7329182101,
+   "team2Name": "texas-tech",
+   "team2Score": 72.0119815876
+ },
+ {
+   "Round": 1,
+   "team1Name": "butler",
+   "team1Score": 78.4391234662,
+   "team2Name": "purdue",
+   "team2Score": 78.9909484264
+ },
+ {
+   "Round": 1,
+   "team1Name": "kansas",
+   "team1Score": 85.2348825984,
+   "team2Name": "seton-hall",
+   "team2Score": 77.1227536954
+ },
+ {
+   "Round": 1,
+   "team1Name": "clemson",
+   "team1Score": 80.0516335548,
+   "team2Name": "auburn",
+   "team2Score": 75.2389479954
+ },
+ {
+   "Round": 1,
+   "team1Name": "texas-christian",
+   "team1Score": 80.2434240934,
+   "team2Name": "michigan-state",
+   "team2Score": 80.4881486536
+ },
+ {
+   "Round": 1,
+   "team1Name": "oklahoma",
+   "team1Score": 85.6476654996,
+   "team2Name": "duke",
+   "team2Score": 90.8854189051
+ },
+ {
+   "Round": 2,
+   "team1Name": "virginia",
+   "team1Score": 70.3459507719,
+   "team2Name": "kentucky",
+   "team2Score": 56.8504499152
+ },
+ {
+   "Round": 2,
+   "team1Name": "tennessee",
+   "team1Score": 61.3257455775,
+   "team2Name": "cincinnati",
+   "team2Score": 63.0379253502
+ },
+ {
+   "Round": 2,
+   "team1Name": "xavier",
+   "team1Score": 81.3810272998,
+   "team2Name": "ohio-state",
+   "team2Score": 76.5573744738
+ },
+ {
+   "Round": 2,
+   "team1Name": "michigan",
+   "team1Score": 79.6259942349,
+   "team2Name": "unc",
+   "team2Score": 73.879109614
+ },
+ {
+   "Round": 2,
+   "team1Name": "villanova",
+   "team1Score": 86.6842648711,
+   "team2Name": "west-virginia",
+   "team2Score": 78.16945485
+ },
+ {
+   "Round": 2,
+   "team1Name": "texas-tech",
+   "team1Score": 77.8739669337,
+   "team2Name": "purdue",
+   "team2Score": 73.2562779216
+ },
+ {
+   "Round": 2,
+   "team1Name": "kansas",
+   "team1Score": 77.4068250403,
+   "team2Name": "clemson",
+   "team2Score": 72.29311508
+ },
+ {
+   "Round": 2,
+   "team1Name": "michigan-state",
+   "team1Score": 79.4537270661,
+   "team2Name": "duke",
+   "team2Score": 75.4335463985
+ },
+ {
+   "Round": 3,
+   "team1Name": "virginia",
+   "team1Score": 57.7648369803,
+   "team2Name": "cincinnati",
+   "team2Score": 49.3903620611
+ },
+ {
+   "Round": 3,
+   "team1Name": "xavier",
+   "team1Score": 76.9221170893,
+   "team2Name": "michigan",
+   "team2Score": 75.1980950046
+ },
+ {
+   "Round": 3,
+   "team1Name": "villanova",
+   "team1Score": 79.1969853004,
+   "team2Name": "texas-tech",
+   "team2Score": 71.85317295
+ },
+ {
+   "Round": 3,
+   "team1Name": "kansas",
+   "team1Score": 79.3694782329,
+   "team2Name": "michigan-state",
+   "team2Score": 76.8215017277
+ },
+ {
+   "Round": 4,
+   "team1Name": "virginia",
+   "team1Score": 76.3575737369,
+   "team2Name": "xavier",
+   "team2Score": 61.8316473209
+ },
+ {
+   "Round": 4,
+   "team1Name": "villanova",
+   "team1Score": 87.3581185945,
+   "team2Name": "kansas",
+   "team2Score": 77.3069663074
+ },
+ {
+   "Round": 5,
+   "team1Name": "virginia",
+   "team1Score": 68.9432718923,
+   "team2Name": "villanova",
+   "team2Score": 61.9576377729
+ }
+]

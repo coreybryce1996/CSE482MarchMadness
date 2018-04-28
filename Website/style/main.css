@@ -1,0 +1,88 @@
+
+@import url("nord.css");
+
+html{
+    background: var(--nord0);
+    color: var(--nord6);
+    font-family: "Verdana" !important;
+}
+a{
+    color: var(--nord15);
+}
+
+
+.text-area{
+    width: 90%;
+    margin: 5%;
+}
+
+
+.title{
+    font-size: 24px;
+    color:var(--nord14);
+}
+
+.subTitle{
+    font-size: 20px;
+    color:var(--nord8);
+    padding: 5px;
+}
+
+.text{
+    padding: 10px;
+
+}
+.text img{
+    height: 250px;
+}
+
+.table{
+    width: 100%;
+    
+    min-height: 100%;
+}
+
+.column{
+    width: 8.5%;
+    background-color: var(--nord2);
+    min-height: 100%;
+    border-color: #000000;
+    float: left;
+    margin: .25%;
+    
+}
+
+.column-row-small
+{
+    /*
+    height: 20px;
+    width: 100%;
+    padding: 1px;
+    margin-bottom: 10px;
+    font-size: 10px;*/
+    height: 50px;
+    width: 100%;
+    padding: 1px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.column-row-med
+{
+    height: 50px;
+    width: 100%;
+    padding: 1px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.column-row-large
+{
+    height: 100px;
+    width: 100%;
+    padding: 1px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+

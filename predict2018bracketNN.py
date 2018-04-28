@@ -10,7 +10,7 @@ import re
 
 
 def getKenpomNames():
-    fileName = './TeamSpellings.csv'
+    fileName = './teamsData/TeamSpellings.csv'
     names={}
     with open(fileName) as f:
         reader = csv.DictReader(f)
@@ -236,6 +236,20 @@ def createBracket(tournData,kenpomData,model):
             
             
         print("")
+
+    with open('predicted.csv',mode='w') as f:
+        csvFile = csv.writer(f)
+
+        csvFile.writerow(['Round','team1Name','team1Score','team2Name','team2Score'])
+
+        for rnd in range(6):
+        
+            for game in games[rnd]:
+            
+                team1Name = kenpomNames[str(game[0])]["TeamNameSpelling"]
+                team2Name = kenpomNames[str(game[1])]["TeamNameSpelling"]
+                
+                csvFile.writerow([rnd,team1Name, game[2], team2Name, game[3]])
     
 
 
@@ -257,8 +271,8 @@ def formatFirstRound(gameData):
 def main():
 
     # get the data from csv
-    trainTournData = getTourney("./TourneyCompactResults.csv")
-    testTournData = getTourney("./2018FirstRound.csv")
+    trainTournData = getTourney("./tournamentData/TourneyCompactResults.csv")
+    testTournData = getTourney("./tournamentData/2018FirstRound.csv")
     oldKenpomData = getKenpomData('./season_teamid_kenpom.csv')
     curKenpomData = getKenpomData('./kenpom2018stats.csv')
     formattedTourn = formatFirstRound(testTournData)
@@ -271,8 +285,9 @@ def main():
     (xTrain,yTrain) = createTourneyXY(trainTournData,oldKenpomData)
 
     # create our model
-    #model = LinearRegression()
-    model = MLPRegressor(hidden_layer_sizes=15)
+    model = LinearRegression()
+    #model = MLPRegressor(hidden_layer_sizes=15)
+    #LinearRegression
    
     # fit our model using training data
     model.fit(xTrain,yTrain)
