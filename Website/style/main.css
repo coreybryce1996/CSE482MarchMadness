@@ -32,8 +32,23 @@ a{
     padding: 10px;
 
 }
-.text img{
-    height: 250px;
+
+
+.img-pane{
+    width: 100%;
+
+    height: auto;
+    display: block;
+    float: left;
+}
+
+.img-box{
+    width: 24%;
+   margin: 10px;
+    float: left;
+}
+.img-box img{
+    width:100%;
 }
 
 .table{
